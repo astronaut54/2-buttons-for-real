@@ -9,7 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var messageeLabel: UILabel!
+    @IBOutlet weak var messageLabel: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,16 +19,18 @@ class ViewController: UIViewController {
 
     @IBAction func messageButtonPressed(_ sender: Any) {
         print("First message button was pressed")
-        messageeLabel.text = "You are Awesome"
-        messageeLabel.textColor = UIColor.blue
-        messageeLabel.textAlignment = .left
+        messageLabel.text = "You are Awesome"
+        messageLabel.textColor = UIColor.blue
+        messageLabel.textAlignment = .left
+        imageView.image = UIImage(named: "image0")
     }
     
     @IBAction func messagetwoButtonPressed(_ sender: Any) {
         print("Second message button was pressed")
-        messageeLabel.text = "You are Great"
-        messageeLabel.textColor = UIColor.systemRed
-        messageeLabel.textAlignment = .right
+        messageLabel.text = "You are Great"
+        messageLabel.textColor = UIColor.systemRed
+        messageLabel.textAlignment = .right
+        imageView.image = UIImage(named: "image1")
     }
     
 }
