@@ -8,30 +8,40 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
     }
-
+    
     @IBAction func messageButtonPressed(_ sender: Any) {
-        print("First message button was pressed")
-        messageLabel.text = "You are Awesome"
-        messageLabel.textColor = UIColor.blue
-        messageLabel.textAlignment = .left
-        imageView.image = UIImage(named: "image0")
+        let awesomeMessage = "You are Awesome"
+        let greatMessage = "You are Great"
+        let bombMessage = "You are the Bomb"
+        
+        
+        if messageLabel.text == awesomeMessage {
+            messageLabel.text = greatMessage
+            messageLabel.textColor = UIColor.blue
+            imageView.image = UIImage(named: "image1")
+            
+            
+        } else if messageLabel.text == greatMessage {
+            messageLabel.text = bombMessage
+            messageLabel.textColor = UIColor.blue
+            imageView.image = UIImage(named: "image2")
+        }
+        
+        else {
+            messageLabel.text = awesomeMessage
+            imageView.image = UIImage(named: "image0")
+        }
     }
-    
-    @IBAction func messagetwoButtonPressed(_ sender: Any) {
-        print("Second message button was pressed")
-        messageLabel.text = "You are Great"
-        messageLabel.textColor = UIColor.systemRed
-        messageLabel.textAlignment = .right
-        imageView.image = UIImage(named: "image1")
-    }
-    
 }
+
 
